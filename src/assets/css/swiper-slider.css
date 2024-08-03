@@ -1,0 +1,20 @@
+.slider-box .swiper .swiper-button-next,
+.slider-box .swiper .swiper-button-prev {
+  color: #31c48d;
+}
+.slider-box .swiper .swiper-button-next.swiper-button-disabled,
+.slider-box .swiper .swiper-button-prev.swiper-button-disabled {
+  color: #76bea4;
+}
+.nav-for-slider img {
+  transition: height 0.3s ease;
+}
+
+.slider-box .swiper .swiper-slide-visible.swiper-slide-thumb-active {
+  border: 3px solid #31c48d;
+  border-radius: 10px;
+}
+.slider-box .swiper .swiper-slide-visible {
+  display: flex;
+  justify-content: center;
+}

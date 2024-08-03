@@ -1,0 +1,94 @@
+{
+  "files": [
+    {
+      "path": "src/app/components/ProductCollection.js",
+      "bookmarks": [
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": 66,
+          "column": 32
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        }
+      ]
+    },
+    {
+      "path": "src/components/ProductColor.js",
+      "bookmarks": [
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": 23,
+          "column": 18
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        },
+        {
+          "line": -1,
+          "column": 0
+        }
+      ]
+    }
+  ]
+}

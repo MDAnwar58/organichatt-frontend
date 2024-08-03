@@ -1,0 +1,4 @@
+.image-effect {
+  filter: brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(90deg);
+  mix-blend-mode: multiply;
+}

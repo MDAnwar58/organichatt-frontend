@@ -1,0 +1,7 @@
+.icon-rotate {
+  transition: transform 0.5s ease;
+}
+
+.icon-rotate.open {
+  transform: rotate(180deg);
+}
