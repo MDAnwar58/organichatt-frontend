@@ -45,7 +45,11 @@ export default function AppNavBar() {
         isOpenFavorite={isOpenFavorite}
         setIsOpenFavorite={setIsOpenFavorite}
       />
-      <DrawerCartList isOpenCart={isOpenCart} setIsOpenCart={setIsOpenCart} />
+      <DrawerCartList
+        auth={auth}
+        isOpenCart={isOpenCart}
+        setIsOpenCart={setIsOpenCart}
+      />
     </Fragment>
   );
 }

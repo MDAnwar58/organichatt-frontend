@@ -9,7 +9,6 @@ import { Toaster } from "react-hot-toast";
 import useCommonContext from "./common/_context/CommonContext";
 import { getToken } from "../../services/token";
 import "../../assets/css/category-items.css";
-import usePathname from "./common/components/pathname";
 
 export default function UserEndTemplate({ children }) {
   const auth = getToken("auth_user_token");

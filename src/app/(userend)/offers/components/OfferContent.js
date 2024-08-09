@@ -1,11 +1,11 @@
 "use client";
 import React, { Fragment, useEffect, useState } from "react";
 import OfferItem from "./OfferItem";
-import useOfferContext from "../_context/OfferContext";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { get_offers } from "../_api/action";
 
 export default function OfferContent() {
-  const { getOffers } = useOfferContext();
+  const dispatch = useDispatch();
 
   const [offers, setOffers] = useState([]);
   const [page] = useState(1);
@@ -14,8 +14,8 @@ export default function OfferContent() {
   const [btnLoading, setBtnLoading] = useState(false);
 
   useEffect(() => {
-    getOffers();
-  }, []);
+    dispatch(get_offers());
+  }, [dispatch]);
 
   const Offers = useSelector((state) => state.offerData.offers);
 

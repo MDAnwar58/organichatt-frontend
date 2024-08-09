@@ -1,16 +1,18 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import AllCategoryBtn from "./AllCategoryBtn";
-import useCommonContext from "../../common/_context/CommonContext";
-import { useSelector } from "react-redux";
+// import useCommonContext from "../../common/_context/CommonContext";
+import { useDispatch, useSelector } from "react-redux";
 import usePathname from "./pathname";
+import { getCategoriesForManus } from "../_api/action";
 
 export default function AppNavBarSearch() {
-  const { getAllCategoryForManus } = useCommonContext();
+  // const { getAllCategoryForManus } = useCommonContext();
   const pathname = usePathname();
+  const dispatch = useDispatch();
   useEffect(() => {
-    getAllCategoryForManus();
-  }, []);
+    dispatch(getCategoriesForManus());
+  }, [dispatch]);
 
   const categories = useSelector((state) => state.commonData.categories);
 

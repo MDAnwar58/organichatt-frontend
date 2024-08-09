@@ -3,6 +3,7 @@ import {
   cart_product_count,
   cart_product_qty_decrement,
   cart_product_qty_increment,
+  checkout,
   favorite_product_count,
   get_carts,
   get_favorites,
@@ -14,13 +15,15 @@ import {
   remove_fovrite_item,
 } from "../_api/action";
 import useNotify from "../../common/components/notify";
+import { useRouter } from "next/navigation";
 
 export default function useCommonContext() {
   const { notify } = useNotify();
   const dispatch = useDispatch();
-  const getAllCategoryForManus = () => {
-    dispatch(getCategoriesForManus());
-  };
+  const router = useRouter();
+  // const getAllCategoryForManus = () => {
+  //   dispatch(getCategoriesForManus());
+  // };
   const getProductForModal = (id) => {
     dispatch(get_product_for_modal(id));
   };
@@ -72,8 +75,12 @@ export default function useCommonContext() {
     dispatch(remove_fovrite_item(id, userId, notify));
   };
 
+  const checkOut = (userId, cartIds) => {
+    dispatch(checkout(userId, cartIds, notify, router));
+  };
+
   return {
-    getAllCategoryForManus,
+    // getAllCategoryForManus,
     getProductForModal,
     getCarts,
     productAddToCart,
@@ -85,5 +92,6 @@ export default function useCommonContext() {
     productAddToFavorite,
     favoriteProductCount,
     removeFavoriteItem,
+    checkOut,
   };
 }

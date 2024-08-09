@@ -138,3 +138,15 @@ export const remove_fovrite_item = (id, userId, notify) => async (dispatch) => {
     dispatch(get_favorites(userId));
   }
 };
+
+export const checkout =
+  (user_id, cart_ids, notify, router) => async (dispatch) => {
+    const response = await axiosClient.post(`/checkout/${user_id}`, {
+      cart_ids: cart_ids,
+    });
+    // console.log(response.data);
+    if (response.data.status === "success") {
+      notify(response.data.status, response.data.msg);
+      router.push("/order");
+    }
+  };

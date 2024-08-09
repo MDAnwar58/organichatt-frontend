@@ -5,8 +5,10 @@ import { useSelector } from "react-redux";
 import CartDataNotFound from "./CartDataNotFound";
 import CartSubTotalAndTotalPrice from "./CartSubTotalAndTotalPrice";
 import useNotify from "./notify";
+import useCommonContext from "../_context/CommonContext";
 
-export default function DrawerCartList({ isOpenCart, setIsOpenCart }) {
+export default function DrawerCartList({ auth, isOpenCart, setIsOpenCart }) {
+  const { checkOut } = useCommonContext();
   const { notify } = useNotify();
   const [cart, setCart] = useState({
     cart_ids: [],
@@ -50,7 +52,6 @@ export default function DrawerCartList({ isOpenCart, setIsOpenCart }) {
       };
     });
   };
-  // console.log(cart);
   return (
     <Fragment>
       <div
@@ -145,7 +146,7 @@ export default function DrawerCartList({ isOpenCart, setIsOpenCart }) {
             className=" uppercase bg-green-400 hover:bg-green-500/90 w-full text-center py-3 text-lg text-white font-semibold"
             onClick={() => {
               if (cart.cart_ids.length > 0) {
-                alert();
+                checkOut(auth?.user?.userId, cart?.cart_ids);
               } else {
                 notify("fail", "Please Select Any Cart Product!");
               }
